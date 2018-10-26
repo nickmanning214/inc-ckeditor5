@@ -4,18 +4,49 @@
         <meta charset="utf-8">
         <title>CKEditor 5 Framework – Quick start</title>
         <style>
-            body{
-                margin-top:50px;
+            /*reset*/
+            body{margin:0;}
+            
+            
+            header{text-align:center;width:100%;background:white;}
+            
+            /*sticky header*/
+            body{--header-height: 100px;}
+            header{position:fixed;border-bottom:1px solid black;height:var(--header-height);}
+            main{
+                padding-top:var(--header-height);
             }
+
+            main{
+                max-width:500px;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            h1,h2{margin:0;padding:0}
+            
+           
+
         </style>
     </head>
     <body>
-        <div id="editor">
-            <h1>H1 tag shouldn't work</h1>
-            <h2>H2 tag</h2>
-            <p>P tag</p>
-        </div>
-
+        <header>
+            <h1>This is the site header</h1>
+        </header>
+        <main>
+            <h1>This is the headline</h1>
+            <p>This is the deck</p>
+            <section>
+                <h2>This is the body (here is an h2 tag)</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur perspiciatis eligendi assumenda eos minus perferendis exercitationem blanditiis, autem quisquam rem, vero dicta tenetur nihil ex expedita alias fuga doloremque.</p>
+                <p>Nullam nec metus lacus. Mauris sagittis augue nec enim sagittis bibendum non eu lectus. Fusce blandit neque eget diam elementum placerat. Nullam nec quam at nulla fermentum vulputate quis ac lectus. Pellentesque a erat non ipsum suscipit aliquet. Nulla facilisi. Donec lacinia congue velit vitae ultricies. Nunc elementum maximus vulputate. Nam dictum libero vel tortor feugiat, at venenatis erat scelerisque. Integer porttitor quis quam id ullamcorper. Aliquam fringilla ligula et lectus ultricies egestas. Sed congue luctus enim. Curabitur eleifend odio ut vestibulum sagittis. Fusce feugiat arcu viverra pellentesque scelerisque.            </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur perspiciatis eligendi assumenda eos minus perferendis exercitationem blanditiis, autem quisquam rem, vero dicta tenetur nihil ex expedita alias fuga doloremque.</p>
+                <p>Nullam nec metus lacus. Mauris sagittis augue nec enim sagittis bibendum non eu lectus. Fusce blandit neque eget diam elementum placerat. Nullam nec quam at nulla fermentum vulputate quis ac lectus. Pellentesque a erat non ipsum suscipit aliquet. Nulla facilisi. Donec lacinia congue velit vitae ultricies. Nunc elementum maximus vulputate. Nam dictum libero vel tortor feugiat, at venenatis erat scelerisque. Integer porttitor quis quam id ullamcorper. Aliquam fringilla ligula et lectus ultricies egestas. Sed congue luctus enim. Curabitur eleifend odio ut vestibulum sagittis. Fusce feugiat arcu viverra pellentesque scelerisque.            </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur perspiciatis eligendi assumenda eos minus perferendis exercitationem blanditiis, autem quisquam rem, vero dicta tenetur nihil ex expedita alias fuga doloremque.</p>
+                <p>Nullam nec metus lacus. Mauris sagittis augue nec enim sagittis bibendum non eu lectus. Fusce blandit neque eget diam elementum placerat. Nullam nec quam at nulla fermentum vulputate quis ac lectus. Pellentesque a erat non ipsum suscipit aliquet. Nulla facilisi. Donec lacinia congue velit vitae ultricies. Nunc elementum maximus vulputate. Nam dictum libero vel tortor feugiat, at venenatis erat scelerisque. Integer porttitor quis quam id ullamcorper. Aliquam fringilla ligula et lectus ultricies egestas. Sed congue luctus enim. Curabitur eleifend odio ut vestibulum sagittis. Fusce feugiat arcu viverra pellentesque scelerisque.            </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur perspiciatis eligendi assumenda eos minus perferendis exercitationem blanditiis, autem quisquam rem, vero dicta tenetur nihil ex expedita alias fuga doloremque.</p>
+                <p>Nullam nec metus lacus. Mauris sagittis augue nec enim sagittis bibendum non eu lectus. Fusce blandit neque eget diam elementum placerat. Nullam nec quam at nulla fermentum vulputate quis ac lectus. Pellentesque a erat non ipsum suscipit aliquet. Nulla facilisi. Donec lacinia congue velit vitae ultricies. Nunc elementum maximus vulputate. Nam dictum libero vel tortor feugiat, at venenatis erat scelerisque. Integer porttitor quis quam id ullamcorper. Aliquam fringilla ligula et lectus ultricies egestas. Sed congue luctus enim. Curabitur eleifend odio ut vestibulum sagittis. Fusce feugiat arcu viverra pellentesque scelerisque.            </p>
+            </section>
+        </main>
         <script src="dist/bundle.js"></script>
     </body>
 </html>
