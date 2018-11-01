@@ -21,7 +21,9 @@ export default {
         Typing,
         Undo,
         Paragraph, Italic, Heading, HeadingButtonsUI, ParagraphButtonUI],
-    toolbar: ['italic' ],
+    toolbar: {
+        items:['italic']
+    },
     heading: {
         options: [
             { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
