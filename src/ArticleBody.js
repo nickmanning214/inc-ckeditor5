@@ -12,7 +12,8 @@ import ParagraphButtonUI from '@ckeditor/ckeditor5-paragraph/src/paragraphbutton
 export default {
     plugins: [ Essentials, Paragraph, Bold, Italic, Heading, HeadingButtonsUI, ParagraphButtonUI],
     toolbar: {
-        items:[ 'heading2', 'paragraph', 'bold', 'italic' ]
+        items:[ 'heading2', 'paragraph', 'bold', 'italic' ],
+        viewportTopOffset:101
     },
     heading: {
         options: [

@@ -22,7 +22,8 @@ export default {
         Undo,
         Paragraph, Italic, Heading, HeadingButtonsUI, ParagraphButtonUI],
     toolbar: {
-        items:['italic']
+        items:['italic'],
+        viewportTopOffset:101
     },
     heading: {
         options: [

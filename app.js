@@ -8,6 +8,8 @@ window.InlineEditor = InlineEditor;
 window.ArticleBodyConfig = ArticleBodyConfig;
 window.ArticleTitleDeckConfig = ArticleTitleDeckConfig;
 
+console.log(1);
+console.log(ArticleBodyConfig,ArticleTitleDeckConfig)
 
 function activate(){
 
@@ -22,7 +24,7 @@ InlineEditor
 
 
 InlineEditor
-    .create( document.querySelector( 'main p' ),ArticleTitleDeckConfig )
+    .create( document.querySelector( 'main>p' ),ArticleTitleDeckConfig )
     .then( editor => {
         console.log( 'Editor was initialized', editor );
     } )
@@ -32,7 +34,7 @@ InlineEditor
 
 
 InlineEditor
-    .create( document.querySelector( 'main section' ),ArticleTitleDeckConfig )
+    .create( document.querySelector( 'main section' ),ArticleBodyConfig )
     .then( editor => {
         console.log( 'Editor was initialized', editor );
     } )
