@@ -10,10 +10,15 @@ import ParagraphButtonUI from '@ckeditor/ckeditor5-paragraph/src/paragraphbutton
 
 import InlineItems from './plugins/InlineItems/index.js';
 
+import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
+import Link from '@ckeditor/ckeditor5-link/src/link';
+
+import List from '@ckeditor/ckeditor5-list/src/list';
+
 export default {
-    plugins: [ Essentials, Paragraph, Bold, Italic, Heading, HeadingButtonsUI, ParagraphButtonUI, InlineItems],
+    plugins: [ Essentials, Paragraph, Bold, Italic, Heading, HeadingButtonsUI, ParagraphButtonUI, InlineItems, BlockQuote,Link, List],
     toolbar: {
-        items:[ 'heading2', 'paragraph', 'bold', 'italic', ...['buyerzonewidget','comparisongrid','inlineimage','inlinevideo','product','relatedarticle','youtube'] ],
+        items:[ 'heading2', 'paragraph', 'bold', 'italic','blockquote','link', 'numberedList', 'bulletedList',...['buyerzonewidget','comparisongrid','inlineimage','inlinevideo','product','relatedarticle','youtube'] ],
         viewportTopOffset:101
     },
     heading: {
