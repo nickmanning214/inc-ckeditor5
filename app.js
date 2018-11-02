@@ -8,7 +8,7 @@ window.InlineEditor = InlineEditor;
 window.ArticleBodyConfig = ArticleBodyConfig;
 window.ArticleTitleDeckConfig = ArticleTitleDeckConfig;
 
-console.log(1);
+console.log(2);
 console.log(ArticleBodyConfig,ArticleTitleDeckConfig)
 
 function activate(){

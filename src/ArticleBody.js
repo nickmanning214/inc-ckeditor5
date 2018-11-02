@@ -8,11 +8,12 @@ import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import HeadingButtonsUI from '@ckeditor/ckeditor5-heading/src/headingbuttonsui';
 import ParagraphButtonUI from '@ckeditor/ckeditor5-paragraph/src/paragraphbuttonui';
 
+import InlineItems from './plugins/InlineItems/index.js';
 
 export default {
-    plugins: [ Essentials, Paragraph, Bold, Italic, Heading, HeadingButtonsUI, ParagraphButtonUI],
+    plugins: [ Essentials, Paragraph, Bold, Italic, Heading, HeadingButtonsUI, ParagraphButtonUI, InlineItems],
     toolbar: {
-        items:[ 'heading2', 'paragraph', 'bold', 'italic' ],
+        items:[ 'heading2', 'paragraph', 'bold', 'italic', ...['buyerzonewidget','comparisongrid','inlineimage','inlinevideo','product','relatedarticle','youtube'] ],
         viewportTopOffset:101
     },
     heading: {
