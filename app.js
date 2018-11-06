@@ -4,12 +4,54 @@ import ArticleBodyConfig from './src/ArticleBody.js';
 import ArticleTitleDeckConfig from './src/ArticleTitleDeck.js';
 
 
+import Clipboard from '@ckeditor/ckeditor5-clipboard/src/clipboard';
+import Typing from '@ckeditor/ckeditor5-typing/src/typing';
+import Undo from '@ckeditor/ckeditor5-undo/src/undo';
+
+import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+
+
+import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
+
+import Heading from '@ckeditor/ckeditor5-heading/src/heading';
+import HeadingButtonsUI from '@ckeditor/ckeditor5-heading/src/headingbuttonsui';
+import ParagraphButtonUI from '@ckeditor/ckeditor5-paragraph/src/paragraphbuttonui';
+
+
+
+import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
+import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
+
+
+import InlineItems from './src/plugins/InlineItems/index.js';
+
+import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
+import Link from '@ckeditor/ckeditor5-link/src/link';
+
+import List from '@ckeditor/ckeditor5-list/src/list';
+
 window.InlineEditor = InlineEditor;
 window.ArticleBodyConfig = ArticleBodyConfig;
 window.ArticleTitleDeckConfig = ArticleTitleDeckConfig;
 
-console.log(3);
-console.log(ArticleBodyConfig,ArticleTitleDeckConfig)
+window.IncCKEditorFeatures = {
+    InlineEditor,
+    Clipboard,
+    Typing,
+    Undo,
+    Paragraph,
+    Italic,
+    Heading,
+    HeadingButtonsUI,
+    ParagraphButtonUI,
+    Essentials,
+    Bold,
+    InlineItems,
+    BlockQuote,
+    Link,
+    List
+
+}
 
 function activate(){
 

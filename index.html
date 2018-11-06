@@ -3,34 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title>CKEditor 5 Framework – Quick start</title>
-        <style>
-            /*reset*/
-            body{margin:0;}
-            
-            
-            header{text-align:center;width:100%;background:white;}
-            
-            /*sticky header*/
-            body{--header-height: 100px;}
-            header{position:fixed;border-bottom:1px solid black;height:var(--header-height);}
-            main{
-                padding-top:var(--header-height);
-            }
-
-            main{
-                max-width:500px;
-                margin-left:auto;
-                margin-right:auto;
-            }
-            h1,h2{margin:0;padding:0}
-            
-           
-
-        </style>
+        <link rel="stylesheet" href="index.css">
+        
     </head>
     <body>
-        <header>
-            <h1>This is the site header</h1>
+        <header onClick="activate()">
+            <h1>Click here to activate CKEditor</h1>
         </header>
         <main>
             <h1>This is the headline</h1>

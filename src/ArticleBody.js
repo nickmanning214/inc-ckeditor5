@@ -18,7 +18,7 @@ import List from '@ckeditor/ckeditor5-list/src/list';
 export default {
     plugins: [ Essentials, Paragraph, Bold, Italic, Heading, HeadingButtonsUI, ParagraphButtonUI, InlineItems, BlockQuote,Link, List],
     toolbar: {
-        items:[ 'heading2', 'paragraph', 'bold', 'italic','blockquote','link', 'numberedList', 'bulletedList'/*,...['buyerzonewidget','comparisongrid','inlineimage','inlinevideo','product','relatedarticle','youtube'] */],
+        items:[ 'heading2', 'paragraph', 'bold', 'italic','blockquote','link', 'numberedList', 'bulletedList',...['buyerzonewidget','comparisongrid','inlineimage','inlinevideo','product','relatedarticle','youtube']],
         viewportTopOffset:101
     },
     heading: {

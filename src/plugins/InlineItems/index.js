@@ -10,7 +10,7 @@ import { downcastElementToElement } from '@ckeditor/ckeditor5-engine/src/convers
 class InlineItems extends Plugin {
     init() {
         const editor = this.editor;
-
+        console.log(editor.config);
         ['buyerzonewidget','comparisongrid','inlineimage','inlinevideo','product','relatedarticle','youtube'].forEach(iconName=>{
             
             //Data in CKEditor is basically stored in custom elements which are inserted into the "model".
@@ -53,6 +53,7 @@ class InlineItems extends Plugin {
     
                 // Callback executed once the image is clicked.
                 view.on( 'execute', () => {
+                    
                     
                     //This is not a listener. This tells the model to change.
                     this.editor.model.change( writer => {
