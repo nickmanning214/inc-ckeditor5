@@ -34,6 +34,10 @@ window.InlineEditor = InlineEditor;
 window.ArticleBodyConfig = ArticleBodyConfig;
 window.ArticleTitleDeckConfig = ArticleTitleDeckConfig;
 
+const icons = ['buyerzonewidget','comparisongrid','inlineimage','inlinevideo','product','relatedarticle','youtube'].map(iconName=>{
+    return require(`./src/plugins/InlineItems/icons/${iconName}.svg`)
+})
+
 window.IncCKEditorFeatures = {
     InlineEditor,
     Clipboard,
@@ -49,8 +53,8 @@ window.IncCKEditorFeatures = {
     InlineItems,
     BlockQuote,
     Link,
-    List
-
+    List,
+    icons
 }
 
 function activate(){
@@ -78,6 +82,7 @@ InlineEditor
 InlineEditor
     .create( document.querySelector( 'main section' ),ArticleBodyConfig )
     .then( editor => {
+        window.editor = editor;
         console.log( 'Editor was initialized', editor );
     } )
     .catch( error => {
