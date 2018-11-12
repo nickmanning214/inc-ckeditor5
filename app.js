@@ -1,4 +1,9 @@
 import InlineEditor from '@ckeditor/ckeditor5-editor-inline/src/inlineeditor';
+import Plugin from '@ckeditor/ckeditor5-core/src/plugin';;
+import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
+
+
+
 
 import ArticleBodyConfig from './src/ArticleBody.js';
 import ArticleTitleDeckConfig from './src/ArticleTitleDeck.js';
@@ -18,7 +23,6 @@ import HeadingButtonsUI from '@ckeditor/ckeditor5-heading/src/headingbuttonsui';
 import ParagraphButtonUI from '@ckeditor/ckeditor5-paragraph/src/paragraphbuttonui';
 
 
-
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 
@@ -36,7 +40,7 @@ window.ArticleTitleDeckConfig = ArticleTitleDeckConfig;
 
 const icons = ['buyerzonewidget','comparisongrid','inlineimage','inlinevideo','product','relatedarticle','youtube'].map(iconName=>{
     return require(`./src/plugins/InlineItems/icons/${iconName}.svg`)
-})
+});
 
 window.IncCKEditorFeatures = {
     InlineEditor,
@@ -54,7 +58,9 @@ window.IncCKEditorFeatures = {
     BlockQuote,
     Link,
     List,
-    icons
+    icons,
+    Plugin,
+    ButtonView
 }
 
 function activate(){
