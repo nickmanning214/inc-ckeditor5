@@ -5,7 +5,6 @@ import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
 
 
 
-import ArticleBodyConfig from './src/ArticleBody.js';
 import ArticleTitleDeckConfig from './src/ArticleTitleDeck.js';
 
 
@@ -35,6 +34,27 @@ import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import GetEditorOnButtonPress from './src/plugins/GetEditorOnButtonPress/GetEditorOnButtonPress.js';
 
+
+
+
+const ArticleBodyConfig = {
+    plugins: [ Essentials, Paragraph, Bold, Italic, Heading, HeadingButtonsUI, ParagraphButtonUI, /*InlineItems,*/ BlockQuote,Link, List, GetEditorOnButtonPress],
+    toolbar: {
+        items:[ 'heading2', 'paragraph', 'bold', 'italic','blockquote','link', 'numberedList', 'bulletedList',...['buyerzonewidget','comparisongrid','inlineimage','inlinevideo','product','relatedarticle','youtube'],'hereIsAnIconName'],
+        viewportTopOffset:101
+    },
+    heading: {
+        options: [
+            { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+            { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' }
+        ]
+    },
+    onButtonPress:editor=>{
+        alert('This worked???')
+    }
+};
+
+
 window.InlineEditor = InlineEditor;
 window.ArticleBodyConfig = ArticleBodyConfig;
 window.ArticleTitleDeckConfig = ArticleTitleDeckConfig;
@@ -42,6 +62,7 @@ window.ArticleTitleDeckConfig = ArticleTitleDeckConfig;
 const icons = ['buyerzonewidget','comparisongrid','inlineimage','inlinevideo','product','relatedarticle','youtube'].map(iconName=>{
     return require(`./src/plugins/InlineItems/icons/${iconName}.svg`)
 });
+
 
 window.IncCKEditorFeatures = {
     InlineEditor,

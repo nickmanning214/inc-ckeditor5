@@ -10,7 +10,6 @@ import { downcastElementToElement } from '@ckeditor/ckeditor5-engine/src/convers
 class InlineItems extends Plugin {
     init() {
         const editor = this.editor;
-        console.log(editor.config);
         ['buyerzonewidget','comparisongrid','inlineimage','inlinevideo','product','relatedarticle','youtube'].forEach(iconName=>{
             
             //Data in CKEditor is basically stored in custom elements which are inserted into the "model".
