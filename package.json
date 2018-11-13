@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-editor": "babel src -d dist -w",
-    "build-sandbox": "webpack --mode development"
+    "build": "webpack --mode development",
+    "dev": "webpack --mode development -w",
+    "pub": "npm run build && npm version patch && npm publish"
   },
   "author": "",
   "license": "ISC",

@@ -26,5 +26,125 @@
             </section>
         </main>
         <script src="dist/bundle.js"></script>
+        <script>
+            
+        const {
+            InlineEditor,
+            Clipboard,
+            Typing,
+            Undo,
+            Essentials, 
+            Paragraph,
+            Bold, 
+            Italic, 
+            Heading, 
+            HeadingButtonsUI, 
+            ParagraphButtonUI, 
+            /*InlineItems,*/ 
+            BlockQuote,
+            Link, 
+            List, 
+            GetEditorOnButtonPress
+        } = IncCKEditorFeatures;
+        
+
+let bodyPlugins = [ 
+    Essentials, 
+    Paragraph,
+    Bold, 
+    Italic, 
+    Heading, 
+    HeadingButtonsUI, 
+    ParagraphButtonUI, 
+    /*InlineItems,*/ 
+    BlockQuote,
+    Link, 
+    List, 
+    GetEditorOnButtonPress
+];
+
+
+
+
+
+window.InlineEditor = InlineEditor;
+
+window.ArticleBodyConfig = {
+    plugins: [ Essentials, Paragraph, Bold, Italic, Heading, HeadingButtonsUI, ParagraphButtonUI, /*InlineItems,*/ BlockQuote,Link, List, GetEditorOnButtonPress],
+    toolbar: {
+        items:[ 'heading2', 'paragraph', 'bold', 'italic','blockquote','link', 'numberedList', 'bulletedList',...['buyerzonewidget','comparisongrid','inlineimage','inlinevideo','product','relatedarticle','youtube'],'hereIsAnIconName'],
+        viewportTopOffset:101
+    },
+    heading: {
+        options: [
+            { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+            { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' }
+        ]
+    },
+    onButtonPress:editor=>{
+        alert('This worked???')
+    }
+};
+
+
+window.ArticleTitleDeckConfig = {
+    plugins: [ 
+        //Essentials, // enables clipboard, Enter, ShiftEnter, typing and undo support.
+        Clipboard,
+        Typing,
+        Undo,
+        /*Paragraph, Italic, Heading, HeadingButtonsUI, ParagraphButtonUI*/],
+    toolbar: {
+        items:[],
+        viewportTopOffset:101
+    },
+    heading: {
+        options: [
+            { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+            { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' }
+        ]
+    }
+};
+
+
+
+
+function activate(){
+
+InlineEditor
+    .create( document.querySelector( 'main h1' ),ArticleTitleDeckConfig )
+    .then( editor => {
+        console.log( 'Editor was initialized', editor );
+    } )
+    .catch( error => {
+        console.error( error.stack );
+    } );
+
+
+InlineEditor
+    .create( document.querySelector( 'main>p' ),ArticleTitleDeckConfig )
+    .then( editor => {
+        console.log( 'Editor was initialized', editor );
+    } )
+    .catch( error => {
+        console.error( error.stack );
+    } );
+
+
+InlineEditor
+    .create( document.querySelector( 'main section' ),ArticleBodyConfig )
+    .then( editor => {
+        window.editor = editor;
+        console.log( 'Editor was initialized', editor );
+    } )
+    .catch( error => {
+        console.error( error.stack );
+    } );
+
+
+}
+
+window.activate = activate;
+        </script>
     </body>
 </html>
