@@ -33,6 +33,7 @@ import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 
 import List from '@ckeditor/ckeditor5-list/src/list';
+import GetEditorOnButtonPress from './src/plugins/GetEditorOnButtonPress/GetEditorOnButtonPress.js';
 
 window.InlineEditor = InlineEditor;
 window.ArticleBodyConfig = ArticleBodyConfig;
@@ -60,7 +61,8 @@ window.IncCKEditorFeatures = {
     List,
     icons,
     Plugin,
-    ButtonView
+    ButtonView,
+    GetEditorOnButtonPress
 }
 
 function activate(){

@@ -15,10 +15,14 @@ import Link from '@ckeditor/ckeditor5-link/src/link';
 
 import List from '@ckeditor/ckeditor5-list/src/list';
 
+
+import GetEditorOnButtonPress from './plugins/GetEditorOnButtonPress/GetEditorOnButtonPress.js';
+
+
 export default {
-    plugins: [ Essentials, Paragraph, Bold, Italic, Heading, HeadingButtonsUI, ParagraphButtonUI, InlineItems, BlockQuote,Link, List],
+    plugins: [ Essentials, Paragraph, Bold, Italic, Heading, HeadingButtonsUI, ParagraphButtonUI, /*InlineItems,*/ BlockQuote,Link, List, GetEditorOnButtonPress],
     toolbar: {
-        items:[ 'heading2', 'paragraph', 'bold', 'italic','blockquote','link', 'numberedList', 'bulletedList',...['buyerzonewidget','comparisongrid','inlineimage','inlinevideo','product','relatedarticle','youtube']],
+        items:[ 'heading2', 'paragraph', 'bold', 'italic','blockquote','link', 'numberedList', 'bulletedList',...['buyerzonewidget','comparisongrid','inlineimage','inlinevideo','product','relatedarticle','youtube'],'hereIsAnIconName'],
         viewportTopOffset:101
     },
     heading: {
@@ -26,5 +30,8 @@ export default {
             { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
             { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' }
         ]
+    },
+    onButtonPress:editor=>{
+        alert('This worked!')
     }
 }
