@@ -37,7 +37,6 @@ class GetEditorOnButtonPress extends Plugin {
                         writer.insert(element,editor.model.document.selection.getFirstPosition());
                     } );*/
                     this.editor.config.get('onButtonPress')(editor);
-                    alert("this too")
                 } );
     
                 return view;
