@@ -48,9 +48,7 @@ window.IncCKEditorFeatures = {
     Link,
     List,
     icons,
-    GetEditorOnButtonPress,
-    version:require('./package.json').version,
-    currentVersion:'0.0.4'
+    GetEditorOnButtonPress
 }
 
 
