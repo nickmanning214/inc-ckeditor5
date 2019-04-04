@@ -18,6 +18,11 @@ class InlineItems extends Plugin {
             editor.model.schema.register( iconName, {
                 inheritAllFrom: '$text',
                 isObject:true
+                /*
+
+                Whether an item is "self-contained" and should be treated as a whole. Examples of object elements: image, table, video, etc. Note: An object is also a limit, so isLimit() returns true for object elements automatically.
+
+                */
             } );
 
            //Here you have to define how the model turns into HTML. "upcasting" would be the opposite. Not sure if necessary here.
@@ -25,11 +30,21 @@ class InlineItems extends Plugin {
                 model:iconName,
                 view:{
                     name:'span',
+                    classes: iconName,
                     styles: {
                         'color': 'green'
                     }
                 }
-            }))
+            }));
+
+            this.editor.conversion.for('upcast').upcastElementToElement( {
+                view: {
+                    name: 'div',
+                    classes: iconName
+                },
+                model: iconName
+            } );
+            
 
 
             /*
