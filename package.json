@@ -21,6 +21,7 @@
     "@ckeditor/ckeditor5-list": "^11.0.2",
     "@ckeditor/ckeditor5-paragraph": "^10.0.3",
     "@ckeditor/ckeditor5-theme-lark": "^11.1.0",
+    "ckeditor5-indent-text": "^1.0.7",
     "postcss-loader": "^3.0.0",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.23.1",

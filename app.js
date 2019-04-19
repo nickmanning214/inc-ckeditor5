@@ -25,6 +25,7 @@ import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import GetEditorOnButtonPress from './src/plugins/GetEditorOnButtonPress/GetEditorOnButtonPress.js';
+import IndentTextPlugin from 'ckeditor5-indent-text/src/indent-text';
 
 const icons = ['buyerzonewidget','comparisongrid','inlineimage','inlinevideo','product','relatedarticle','youtube'].map(iconName=>{
     return require(`./src/plugins/InlineItems/icons/${iconName}.svg`)
@@ -48,7 +49,8 @@ window.IncCKEditorFeatures = {
     Link,
     List,
     icons,
-    GetEditorOnButtonPress
+    GetEditorOnButtonPress,
+    IndentTextPlugin
 }
 
 
