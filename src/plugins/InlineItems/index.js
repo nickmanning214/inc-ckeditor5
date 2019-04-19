@@ -37,13 +37,13 @@ class InlineItems extends Plugin {
                 }
             }));
 
-            this.editor.conversion.for('upcast').upcastElementToElement( {
+            this.editor.conversion.for('upcast').add(upcastElementToElement( {
                 view: {
                     name: 'div',
                     classes: iconName
                 },
                 model: iconName
-            } );
+            } ));
             
 
 
