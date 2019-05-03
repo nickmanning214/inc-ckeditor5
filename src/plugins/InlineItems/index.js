@@ -16,7 +16,7 @@ class InlineItems extends Plugin {
 
             //First register the custom element. You can add certain rules here like where can the element go.
             editor.model.schema.register( iconName, {
-                inheritAllFrom: '$text',
+                inheritAllFrom: '$block',
                 isObject:true
                 /*
 
